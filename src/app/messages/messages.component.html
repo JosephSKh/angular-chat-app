@@ -1,0 +1,13 @@
+My username is: {{username}}
+<hr/>
+<div class="message" *ngFor="let item of messages">
+    <joe-message-item [username]="item.username" [message]="item.message"></joe-message-item>
+</div>
+<hr/>
+<form (submit)="sendMessage(username, message)">
+    <input name="username" placeholder="Username" [(ngModel)]="username" />
+    <br/>
+    <textarea name="message" placeholder="Type in your message" [(ngModel)]="message"></textarea>
+    <br/>
+    <input type="submit" value="Send !!"/>
+</form>
