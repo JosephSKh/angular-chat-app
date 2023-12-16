@@ -3,7 +3,11 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MessageItemComponent } from '../message-item/message-item.component';
 
-import { io } from 'socket.io-client';
+// TODO
+// npm i socket.io-client
+// connent on the websocket server ws://172.16.227.115:3000
+// send message on 'message' event
+// listen to the 'message' event and update array
 
 @Component({
   selector: 'app-messages',
