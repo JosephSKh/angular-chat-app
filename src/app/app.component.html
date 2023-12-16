@@ -2,3 +2,8 @@
   {{ title }}
 </h1>
 <app-messages></app-messages>
+<div *ngIf="todos$ | async as myTodo">
+  {{ myTodo.id }}
+  {{ myTodo.userId }}
+  {{ myTodo.title }}
+</div>
