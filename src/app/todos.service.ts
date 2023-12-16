@@ -8,7 +8,7 @@ import { TODO } from './todo.model';
 export class TODOsService {
     constructor(private httpClient: HttpClient) { }
     
-    getTODOS(): Observable<TODO> {
-        return this.httpClient.get<TODO>('https://jsonplaceholder.typicode.com/todos/1');
+    getTODOS(id: number): Observable<TODO> {
+        return this.httpClient.get<TODO>(`https://jsonplaceholder.typicode.com/todos/${id}`);
     }
 }
